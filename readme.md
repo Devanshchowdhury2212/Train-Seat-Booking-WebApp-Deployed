@@ -116,3 +116,14 @@ To run the application locally, you'll need to set up a `.env` file with the fol
 4. Run the Application
 ```
 npm run dev
+```
+### Live Deployed
+
+This web application is hosted live on Render: [Train Seat Booking WebApp](https://train-seat-booking-webapp-deployeds.onrender.com)
+
+### Available Pages:
+- **POST /signup**: Create a new user account.
+- **POST /login**: Login with your credentials to receive a JWT token.
+- **GET /dashboard**: Access the user dashboard (authentication required).
+
+You can interact with these endpoints to manage user authentication and view the seat booking dashboard.
