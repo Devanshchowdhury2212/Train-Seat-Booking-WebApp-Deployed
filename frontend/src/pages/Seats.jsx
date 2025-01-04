@@ -15,7 +15,7 @@ const Seats = () => {
 
   const fetchSeats = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/seats");
+      const response = await axios.get("https://train-seat-booking-webapp-deployeds.onrender.com/seats");
       setSeats(response.data.sort((a, b) => a.id - b.id)); // Ensure seats are sorted by ID
     } catch {
       setError("Failed to load seats.");
@@ -29,7 +29,7 @@ const Seats = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/seats/reserve",
+        "https://train-seat-booking-webapp-deployeds.onrender.com/seats/reserve",
         { numberOfSeats: numSeatsToBook },
         {
           withCredentials: true,

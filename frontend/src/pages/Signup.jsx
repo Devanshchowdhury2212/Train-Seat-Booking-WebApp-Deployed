@@ -16,7 +16,7 @@ export default function SignupPage() {
     
     try {
       const response = await axios.post(
-        "http://localhost:5000/auth/signup",
+        "https://train-seat-booking-webapp-deployeds.onrender.com/auth/signup",
         { username, email, password },
         { withCredentials: true } // Ensures cookies are sent if needed
       );

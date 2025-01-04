@@ -19,7 +19,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://train-seat-booking-webapp-deployeds.onrender.com"
+      // "https://train-seat-booking-webapp-deployeds.onrender.com"
     ], // 'http://localhost:3000',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
