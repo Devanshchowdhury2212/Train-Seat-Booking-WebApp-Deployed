@@ -19,8 +19,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://seat-booking-app-1-frontend.onrender.com",
-      "http://localhost:5173"
+      "https://train-seat-booking-webapp-deployeds.onrender.com"
     ], // 'http://localhost:3000',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
