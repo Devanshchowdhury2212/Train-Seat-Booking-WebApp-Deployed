@@ -89,3 +89,30 @@ The request body should contain the following fields:
       "seatIds": [1, 2, 3]
     }
     ```
+
+## Setup .env File
+
+To run the application locally, you'll need to set up a `.env` file with the following structure.
+
+### Steps:
+
+1. **Clone the Repository:**
+
+   First, clone the repository to your local machine using Git:
+
+   ```bash
+   git clone https://github.com/Devanshchowdhury2212/Train-Seat-Booking-WebApp-Deployed.git
+   cd Train-Seat-Booking-WebApp-Deployed
+   npm install
+
+2. Create a `.env` file in the root directory of the project.
+3. Add the following content to the `.env` file:
+
+   ```env
+   SUPABASE_KEY=
+   SUPABASE_URL=
+   JWT_SECRET=
+   PORT=5000
+4. Run the Application
+```
+npm run dev
