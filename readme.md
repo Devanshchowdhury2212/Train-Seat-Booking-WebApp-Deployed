@@ -41,3 +41,51 @@ Implemented Sign Up, Login, and Seat Booking Functionality with Optimized Seat S
   - If the system is unable to book enough seats, it will return an error with a cost of "Infinity" and an empty seat arrangement.
 
 This commit establishes the primary user management and seat booking features, ensuring a secure and optimized user experience. Future updates will extend these features and add more enhancements like session expiration, user profile management, and more dynamic seat availability options.
+
+## Endpoints
+
+### 1. User Authentication
+
+#### Signup
+- **Endpoint**: `POST /auth/signup`
+- **Description**: Creates a new user account.
+- **Request Body**:
+  ```json
+  {
+    "username": "testuser",
+    "password": "password123",
+    "email": "testuser@example.com"
+  }
+
+### **POST** `/auth/login`
+
+#### Description:
+Logs in an existing user and provides a JWT token stored in an HTTP-only cookie. This token can be used for subsequent authenticated requests.
+
+#### Request Body:
+The request body should contain the following fields:
+
+```json
+{
+  "username": "testuser",
+  "password": "password123"
+}   
+```
+
+### 2. Book Seats
+
+- **Endpoint**: `POST /seats/book`
+- **Method**: `POST`
+- **Description**: Allows users to book specific seats. The user must be authenticated via JWT token.
+
+- **Request Headers**:
+  - **Authorization**: `Bearer <JWT_TOKEN>` (The user must be logged in)
+  
+- **Request Body**:
+  - An array of seat IDs the user wants to book.
+
+    ```json
+    {
+      "seatIds": [1, 2, 3]
+    }
+    ```
